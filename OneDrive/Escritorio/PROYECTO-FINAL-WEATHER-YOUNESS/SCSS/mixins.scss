@@ -1,0 +1,16 @@
+@mixin card-style($colorFondo, $height) {
+    height: $height;
+    .card-body {
+        background-color: $colorFondo;
+        overflow-y: auto;
+        max-height: 60vh;
+    }
+}
+@mixin sidebar-hover-effect($font-family, $text-decoration) { 
+    .list-group-item-action { 
+        &:hover { 
+            font-family: $font-family; 
+            text-decoration: $text-decoration; 
+        } 
+    } 
+}

@@ -1,0 +1,56 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+body, html {
+    height: $porcentajeOcupacion;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+}
+
+.bg-image {
+    background-image: url('/IMAGENES/n5nbqdujvpp51.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: $porcentajeOcupacion;
+    width: $porcentajeOcupacion;
+    position: fixed; // Fijar la imagen de fondo para que cubra toda la pantalla
+    top: 0;
+    left: 0;
+    z-index: -1; // Asegurar que la imagen esté detrás del contenido
+}
+
+#barraLateral {
+    width: 250px;   
+    transition: all 0.3s; // El movimiento de la barra lateral sea fluido en vex de brusco
+    position: fixed;
+    top: 0; // Alineado con el navbar superior
+    left: -250px; // Oculto inicialmente
+    height: $porcentajeOcupacion;
+    z-index: 1050; // Aparece sobre el navbar superior
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; // Centrando verticalmente los elementos 
+    align-items: center;
+    &.show {
+        left: 0; // Mostrar barra lateral
+    }
+    @include sidebar-hover-effect($font-family,$text-decoration);
+}
+
+#contenido-principal {
+    width: $porcentajeOcupacion;
+    height: $porcentajeOcupacion;
+    overflow-y: auto; // Permitir desplazamiento en el contenido principal
+}
+
+#botonNavLateral {
+    position: absolute;
+    top: $dimensionesBoton;
+    left: $dimensionesBoton;
+    transition: left 0.3s ease-in-out; // El movimiento del botón sea fluido en vex de brusco
+}
+
+.card {
+    @include card-style($colorFondo,auto);
+}

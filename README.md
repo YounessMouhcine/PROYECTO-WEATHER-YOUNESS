@@ -43,9 +43,4 @@ Este archivo contiene la lógica JavaScript de la aplicación:
 - **Navegación en la barra lateral**
 - **Interacción con el Usuario**: Limpia y actualiza el contenido mostrado en la página basado en las interacciones del usuario.
 
-## Uso del Proyecto
-
-1. **Clonar el Repositorio**:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   cd tu-repositorio
+## Enlace GitHub Pages
